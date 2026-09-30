@@ -1,0 +1,7 @@
+# dsh-plugin-source-link — profile bundle patch.
+# 安装到某个 profile（例如 web）后，DSH 会把本文件当作一层 bundle patch 应用。
+# 行 id `plugin-source-link` 与 host 半 index.js 导出的 `name` 保持一致；
+# 客户端半由 DSH 的 client-modules 扫描本包的 `dsh.client` 声明后自动挂到这一行上。
+- insert:
+    - id: plugin-source-link
+      name: 'dsh-plugin-source-link'

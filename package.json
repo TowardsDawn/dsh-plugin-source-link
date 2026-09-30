@@ -1,0 +1,33 @@
+{
+  "name": "dsh-plugin-source-link",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH Web 插件面板扩展：在每个插件详情页显示该插件的仓库 URL（超链接）或本地仓库路径；数据目录里提取不到时提供输入框手动填写。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./client.js": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "tests",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "id": "dsh-plugin-source-link",
+    "name": "插件来源链接",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
