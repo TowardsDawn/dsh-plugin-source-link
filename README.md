@@ -4,8 +4,6 @@
 在**每个插件详情页**底部显示该插件的 GitHub 仓库 URL（可点击超链接）或本地仓库路径；
 数据目录里提取不到时，提供一个输入框让你自己填，并持久保存。
 
-本目录只是一份插件源码 —— **尚未安装**到任何 profile。
-
 ## 目录结构
 
 ```
@@ -18,16 +16,6 @@ dsh-plugin-source-link/
 ├─ tests/verify.mjs      离线自检：纯函数 + 用假 ctx/req/res 驱动 4 条路由
 └─ README.md
 ```
-
-## 自检（无需安装、不碰真实 profile）
-
-```powershell
-node D:\通用工作区\dsh-plugin-source-link\tests\verify.mjs
-```
-
-会在插件目录下建一份临时 DSH_HOME（跑完自动删除），覆盖：URL 归一化的各种写法、
-`github:` / `git+ssh` / `file:` 依赖、`package.json.repository`、本地 `.git/config`、
-手动值读写与清除、非法包名与危险 URL 拒绝、loopback 栅栏（含 Host 头防 DNS rebinding）。
 
 ## 功能
 
@@ -42,14 +30,9 @@ node D:\通用工作区\dsh-plugin-source-link\tests\verify.mjs
 
 ## 安装（由你自己执行）
 
-按你的 DSH 版本用 `dsh plugin --help` 确认写法，下面两种是常见形态：
-
 ```powershell
-# 以本地路径（link）安装到 web profile
-dsh plugin --profile web add link:D:\通用工作区\dsh-plugin-source-link
 
-# 或先把目录放进 <DSH 数据目录>\plugins\，再用 file: 安装
-dsh plugin --profile web add file:C:\Users\xingh\.dsh\plugins\dsh-plugin-source-link
+dsh plugin --profile web add "github:TowardsDawn/dsh-plugin-source-link"
 ```
 
 安装后重启 DSH Web（或让它热重组），侧栏「插件」→ 点开任一插件详情页，底部即出现「插件来源」。
