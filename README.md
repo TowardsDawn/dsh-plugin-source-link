@@ -1,3 +1,7 @@
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![dsh-plugin](https://img.shields.io/badge/dsh-plugin-blue)](https://github.com/topics/dsh-plugin)
+[![DSH Market 收录徽章](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-zh.svg)](https://dsh.market/)
+
 # dsh-plugin-source-link
 
 给 DSH Web 的**插件面板**（侧栏「插件」，即管理第三方插件的面板）加一块「插件来源」：
@@ -61,3 +65,7 @@ dsh plugin --profile web remove dsh-plugin-source-link
 ```
 
 手动值文件 `<profile>/plugin-source-links.json` 不会被自动删除，需要的话自行移除。
+
+## License
+
+[MIT](LICENSE)
