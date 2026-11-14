@@ -1,3 +1,8 @@
+# 停更通知：
+# 本插件已停止更新，插件功能全量迁移至[TowardsDawn/dsh-layout-tweaks](https://github.com/TowardsDawn/dsh-layout-tweaks)
+
+---
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![dsh-plugin](https://img.shields.io/badge/dsh-plugin-blue)](https://github.com/topics/dsh-plugin)
 [![DSH Market 收录徽章](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-zh.svg)](https://dsh.market/)
